@@ -1,41 +1,45 @@
 @import "tailwindcss";
 
-@theme {
-    --color-light-primary: #F1F1F1;
-    --color-light-secondary: #E9E9E9;
-    --color-light-orange-medium: #fd8839;
-    --color-light-orange: #fd9836;
-
-    --color-dark-primary: #121212;
-    --color-dark-secondary: #282828;
-    --color-dark-orange-medium: #d75506;
-    --color-dark-orange: #ffaf65;
-}
-
 :root {
-    --color-primary: #F1F1F1;
-    --color-secondary: #E9E9E9;
-    --color-orange-medium: #fd8839;
-    --color-orange: #fd9836;
+    /* CORES PRINCIPAIS */
+    --color-primary: #0072CE;       /* Azul principal */
+    --color-primary-dark: #004AAD;  /* Azul mais escuro (hover) */
+    --color-secondary: #009A44;     /* Verde principal */
+    --color-secondary-dark: #006F34;/* Verde mais escuro (hover) */
 
-    --color-card: #E4E4E4;
+    /* COR DE DESTAQUE (COMPRO CATALISADOR) */
+    --color-accent: #C6D600;        /* Amarelo/Verde-limão */
 
-    --text-primary: #121212;
+    /* FUNDOS E CARDS */
+    --color-background: #FFFFFF;    /* Fundo da página */
+    --color-card: #F7F9FB;          /* Cards / contêineres */
+
+    /* TEXTO */
+    --text-primary: #1A1A1A;
+    --text-secondary: #4A4A4A;
 }
 
 .dark {
-    --color-primary: #121212;
-    --color-secondary: #282828;
-    --color-orange-medium: #f5903f;
-    --color-orange: #ffaf65;
+    /* CORES PRINCIPAIS */
+    --color-primary: #0090FF;       /* Azul mais vibrante no dark */
+    --color-primary-dark: #0072CE;
+    --color-secondary: #00C465;     /* Verde iluminado no dark */
+    --color-secondary-dark: #009A44;
 
-    --color-card: #393939;
+    /* COR DE DESTAQUE */
+    --color-accent: #C6D600;
 
-    --text-primary: #F1F1F1;
+    /* FUNDOS E CARDS */
+    --color-background: #0B0D0F;    /* Fundo quase preto */
+    --color-card: #121417;          /* Cards escuros */
+
+    /* TEXTO */
+    --text-primary: #FFFFFF;
+    --text-secondary: #A7B0BC;
 }
 
 .texto-color-laranja{
-    color: var(--color-orange) !important;
+    color: var(--color-primary) !important;
 }
 
 .texto-secondary {
@@ -47,7 +51,7 @@
 }
 
 .background-laranja {
-    background-color: var(--color-orange-medium) !important;
+    background-color: var(--color-primary-dark) !important;
 }
 
 body {

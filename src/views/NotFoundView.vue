@@ -4,7 +4,7 @@
       <section class="w-[100%] h-[100%] flex flex-col items-center justify-center">
         <v-card width="250px" class="bg-transparent" elevation="0">
             <v-img
-                height="130" :src="require('@/assets/img/logos/Png/Maralua_Ícone-13.png')"
+                height="130" :src="require('@/assets/img/logo.png')"
                 alt="logo-ícone maralua" cover
             ></v-img>
           </v-card>
