@@ -608,6 +608,34 @@
             </div>
           </v-container>
         </section>
+
+        <section class="py-16 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+          <v-container class="text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-100 mb-6">
+              Frase do Dia
+            </h2>
+
+            <transition name="fade">
+              <p
+                  v-if="fraseDoDia"
+                  key="frase"
+                  class="text-xl font-medium text-slate-300 max-w-3xl mx-auto leading-relaxed"
+              >
+                “{{ fraseDoDia }}”
+              </p>
+            </transition>
+
+            <v-btn
+                variant="outlined"
+                rounded="xl"
+                size="default"
+                class="mt-8 border-amber-300 text-amber-300 hover:bg-amber-300 hover:text-black transition text-none"
+                @click="gerarFraseAleatoria"
+            >
+              Mostrar outra frase
+            </v-btn>
+          </v-container>
+        </section>
       </v-main>
 
       <!-- FOOTER -->
@@ -634,7 +662,7 @@ import { ref, computed } from 'vue'
 const menuAberto = ref(false)
 
 // Troque pelo número da empresa
-const whatsappNumero = '5565999999999' // ex: 55 + DDD + número
+const whatsappNumero = '5565996478524' // ex: 55 + DDD + número
 
 const whatsMensagem = encodeURIComponent(
     'Olá! Gostaria de uma cotação para catalisador.'
@@ -777,6 +805,35 @@ const cardsCatalisadores = [
   {img: require('@/assets/img/cat10.png')},
 ]
 
+// LISTA DE FRASES (pode adicionar quantas quiser)
+const frases = [
+  "O segredo do sucesso é começar.",
+  "A constância vence o que o talento começa.",
+  "Mesmo o menor passo te move para frente.",
+  "Quem se dedica sempre encontra um caminho.",
+  "Sua disciplina vai te levar além da motivação.",
+  "Tudo o que você quer está do outro lado do esforço.",
+  "A jornada pode ser longa, mas cada passo vale a pena.",
+  "O impossível é apenas o possível que ainda não foi tentado.",
+  "Quem trabalha em silêncio faz barulho com resultados.",
+  "Dê o seu melhor hoje, e o amanhã fará sentido.",
+  "Nada muda se você não mudar.",
+  "Pequenos avanços diários geram grandes conquistas.",
+  "Se você não tentar, nunca saberá o que poderia ter sido.",
+  "Você é capaz de muito mais do que imagina.",
+  "Faça por você. O resto vem."
+]
+
+// FRASE DO DIA (sempre igual no mesmo dia)
+const indiceDoDia = new Date().getDate() % frases.length
+const fraseDiaInicial = frases[indiceDoDia]
+
+const fraseDoDia = ref(fraseDiaInicial)
+
+// FUNÇÃO PARA GERAR UMA FRASE ALEATÓRIA
+const gerarFraseAleatoria = () => {
+  fraseDoDia.value = frases[Math.floor(Math.random() * frases.length)]
+}
 </script>
 
 <style scoped>
@@ -798,5 +855,15 @@ const cardsCatalisadores = [
   transform: scale(1.1);
   box-shadow: 0 0 10px #F2C72F;
   transition: all 0.3s ease-in-out;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
