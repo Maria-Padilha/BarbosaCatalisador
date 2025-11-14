@@ -321,7 +321,7 @@
               <div class="space-y-4 text-sm text-slate-300">
                 <div
                     data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200"
-                    class="rounded-2xl border border-emerald-400/40 bg-emerald-500/5 pa-5 h-[320px] card"
+                    class="rounded-2xl border border-emerald-400/40 bg-emerald-500/5 pa-5 card"
                 >
                   <v-img alt="catalisador" :src="require('@/assets/img/catalisador-carro.jpg')" class="rounded-lg" />
                 </div>
@@ -383,7 +383,7 @@
               <div class="order-1 lg:order-2">
                 <div
                     data-aos="fade-down" data-aos-duration="1200"
-                    class="rounded-3xl card border border-white/10 bg-gradient-to-br from-slate-900 via-slate-900/80 to-slate-950 pa-5 shadow-lg h-[320px]"
+                    class="rounded-3xl card border border-white/10 bg-gradient-to-br from-slate-900 via-slate-900/80 to-slate-950 pa-5 shadow-lg"
                 >
                   <v-img alt="catalisador" :src="require('@/assets/img/catalisador-pessoa.jpg')" class="rounded-lg" />
                 </div>
@@ -443,11 +443,11 @@
               </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
               <div
                   v-for="(item, i) in cardsCatalisadores"
                   :key="i"
-                  data-aos="fade-down" data-aos-duration="1200" :data-aos-delay="200 * i"
+                  data-aos="fade-down" data-aos-duration="1200" :data-aos-delay="50 * i"
                   class="group relative rounded-2xl overflow-hidden card pa-5 border border-white/10 bg-slate-900/70"
               >
                 <img
@@ -600,7 +600,7 @@
               <div class="order-1 lg:order-2">
                 <div
                     data-aos="fade-down" data-aos-duration="1200"
-                    class="rounded-3xl card border border-white/10 bg-gradient-to-br from-slate-900 via-slate-900/80 to-slate-950 pa-5 shadow-lg h-[320px]"
+                    class="rounded-3xl card border border-white/10 bg-gradient-to-br from-slate-900 via-slate-900/80 to-slate-950 pa-5 shadow-lg"
                 >
                   <v-img alt="catalisador" :src="require('@/assets/img/catalisador-carro-2.jpg')" class="rounded-lg" />
                 </div>
