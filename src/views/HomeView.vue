@@ -77,7 +77,7 @@
               </button>
 
               <v-btn
-                  class="mt-2"
+                  class="mt-2 text-none"
                   block
                   color="amber"
                   variant="flat"
@@ -99,7 +99,7 @@
             class="min-h-[90vh] flex items-center"
         >
           <v-container>
-            <div class="grid md:grid-cols-2 gap-10 items-center py-10">
+            <div class="grid md:grid-cols-2 gap-x-10 gap-y-3 items-center py-10">
               <!-- Texto -->
               <div>
                 <p class="text-amber-400 font-semibold mb-3 uppercase tracking-[0.2em] text-xs">
@@ -115,8 +115,7 @@
                   em dinheiro na hora.
                 </h1>
                 <p class="text-slate-300 text-base md:text-lg max-w-xl mb-6">
-                  Fazemos avaliação rápida e justa, com base na cotação atual dos
-                  metais preciosos. Pagamento imediato via PIX e logística
+                  Pagamento imediato via PIX e logística
                   facilitada para Cuiabá e Varzêa Grande.
                 </p>
 
@@ -132,31 +131,6 @@
                     Solicitar cotação agora
                     <v-icon end>mdi-whatsapp</v-icon>
                   </v-btn>
-
-                  <v-btn
-                      variant="outlined"
-                      rounded="xl"
-                      size="large"
-                      class="border-amber-300 text-amber-300 text-none"
-                      @click="scrollToSection('como-funciona')"
-                  >
-                    Ver como funciona
-                  </v-btn>
-                </div>
-
-                <div class="flex flex-wrap gap-4 text-xs text-slate-400">
-                  <div class="flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                    Pagamento no mesmo dia
-                  </div>
-                  <div class="flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-amber-400"></span>
-                    Avaliação transparente
-                  </div>
-                  <div class="flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-sky-400"></span>
-                    Atendemos Cuiabá e VG
-                  </div>
                 </div>
               </div>
 
@@ -165,16 +139,9 @@
                 <div
                     class="rounded-3xl pa-5 border border-white/10 bg-gradient-to-b from-white/5 to-white/0 p-6 shadow-2xl shadow-amber-500/10"
                 >
-                  <h2 class="font-semibold text-lg mb-1">
-                    Exemplos de Catalisadores
-                  </h2>
-                  <p class="text-sm text-slate-300 mb-4">
-                    Veja alguns modelos reais que compramos e avaliamos diariamente.
-                  </p>
-
                   <!-- SLIDER -->
                   <v-carousel
-                      height="260"
+                      height="350"
                       hide-delimiter-background
                       :show-arrows="false"
                       cycle
@@ -189,33 +156,23 @@
                         <img
                             :src="item.img"
                             class="w-full h-full object-cover"
-                            alt="Catalisador"
+                            :alt="`Imagem Catalisador ${i + 1}`"
                         />
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-black/60 px-3 py-2 text-xs text-slate-200"
-                        >
-                          {{ item.texto }}
-                        </div>
                       </div>
                     </v-carousel-item>
                   </v-carousel>
 
                   <!-- Call to action -->
                   <v-btn
-                      block
-                      color="amber"
                       variant="flat"
                       rounded="xl"
                       size="large"
-                      class="mt-5 text-none"
-                      @click="scrollToSection('contato')"
+                      color="amber"
+                      class="w-100 mt-4 text-none"
+                      @click="scrollToSection('como-funciona')"
                   >
-                    Solicitar Cotação
+                    Ver como funciona
                   </v-btn>
-
-                  <p class="mt-3 text-[11px] text-slate-400">
-                    Envie seu modelo e receba avaliação em poucos minutos.
-                  </p>
                 </div>
               </div>
             </div>
@@ -776,20 +733,25 @@ const faq = [
 const sliderCatalisadores = [
   {
     img: require('@/assets/img/catalisador-1.jpg'),
-    texto: 'Conjunto de catalisadores completos e bem preservados — ideal para avaliação de alto valor.'
   },
   {
     img: require('@/assets/img/catalisador-2.jpeg'),
-    texto: 'Lote variado com dezenas de catalisadores usados, modelos nacionais e importados.'
   },
   {
     img: require('@/assets/img/catalisador-3.jpeg'),
-    texto: 'Cerâmica interna de catalisadores triturada, usada para extração de metais preciosos.'
   },
   {
     img: require('@/assets/img/catalisador-4.jpeg'),
-    texto: 'Catalisadores em diferentes estados, perfeitos para reciclagem e desmontagem.'
-  }
+  },
+  {
+    img: require('@/assets/img/catalisador-google.jpg'),
+  },
+  {
+    img: require('@/assets/img/catalisador-google-2.jpg'),
+  },
+  {
+    img: require('@/assets/img/catalisador-google-3.jpg'),
+  },
 ]
 
 const cardsCatalisadores = [
