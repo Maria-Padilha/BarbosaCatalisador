@@ -102,6 +102,11 @@
             <div class="grid md:grid-cols-2 gap-x-10 gap-y-3 items-center py-10">
               <!-- Texto -->
               <div>
+                <div class="flex justify-end mb-4">
+                  <v-sheet class="w-[100px] bg-transparent">
+                    <v-img :src="require('@/assets/img/central.png')" alt="logo techmet" class="w-100 h-100" cover />
+                  </v-sheet>
+                </div>
                 <p class="text-amber-400 font-semibold mb-3 uppercase tracking-[0.2em] text-xs">
                   Compra &amp; venda de catalisadores
                 </p>
@@ -114,7 +119,12 @@
                   </span>
                   em dinheiro na hora.
                 </h1>
-                <p class="text-slate-300 text-base md:text-lg max-w-xl mb-6">
+                <div class="flex justify-end">
+                  <v-sheet class="w-[100px] bg-transparent">
+                    <v-img :src="require('@/assets/img/techmet.png')" alt="logo techmet" class="w-100 h-100" cover />
+                  </v-sheet>
+                </div>
+                <p class="text-slate-300 text-base md:text-lg max-w-xl my-6">
                   Pagamento imediato via PIX e logística
                   facilitada para Cuiabá e Varzêa Grande.
                 </p>
