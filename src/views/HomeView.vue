@@ -70,6 +70,33 @@
 
           <v-container>
             <div class="hero-grid">
+              <div class="hero-visual" data-aos="fade-left" data-aos-duration="900">
+                <div class="main-photo-card">
+                  <v-carousel
+                      height="520"
+                      cycle
+                      interval="2800"
+                      hide-delimiter-background
+                      :show-arrows="false"
+                      class="hero-carousel"
+                  >
+                    <v-carousel-item v-for="(item, i) in sliderCatalisadores" :key="i">
+                      <img :src="item.img" :alt="item.alt" class="carousel-image" />
+                    </v-carousel-item>
+                  </v-carousel>
+
+                  <div class="floating-card floating-card-top">
+                    <v-icon color="#16a34a">mdi-cash</v-icon>
+                    <span>Pagamento rápido</span>
+                  </div>
+
+                  <div class="floating-card floating-card-bottom">
+                    <v-icon color="#0284c7">mdi-camera</v-icon>
+                    <span>Envie fotos para cotar</span>
+                  </div>
+                </div>
+              </div>
+
               <div class="hero-copy" data-aos="fade-right" data-aos-duration="900">
                 <div class="hero-badge">
                   <v-icon size="18">mdi-recycle</v-icon>
@@ -108,33 +135,6 @@
                   <div v-for="item in stats" :key="item.label" class="stat-card">
                     <strong>{{ item.value }}</strong>
                     <span>{{ item.label }}</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="hero-visual" data-aos="fade-left" data-aos-duration="900">
-                <div class="main-photo-card">
-                  <v-carousel
-                      height="520"
-                      cycle
-                      interval="2800"
-                      hide-delimiter-background
-                      :show-arrows="false"
-                      class="hero-carousel"
-                  >
-                    <v-carousel-item v-for="(item, i) in sliderCatalisadores" :key="i">
-                      <img :src="item.img" :alt="item.alt" class="carousel-image" />
-                    </v-carousel-item>
-                  </v-carousel>
-
-                  <div class="floating-card floating-card-top">
-                    <v-icon color="#16a34a">mdi-cash</v-icon>
-                    <span>Pagamento rápido</span>
-                  </div>
-
-                  <div class="floating-card floating-card-bottom">
-                    <v-icon color="#0284c7">mdi-camera</v-icon>
-                    <span>Envie fotos para cotar</span>
                   </div>
                 </div>
               </div>
